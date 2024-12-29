@@ -11,7 +11,7 @@ const Sideprop = ({ SidebarProp }) => {
                     <div className=' flex items-center flex-col' key={sideprop.id}>
                         {/* one */}
                         <div className="py-5 flex flex-row lg:flex-col sm:flex-col gap-5 lg:gap-0 items-center justify-start">
-                            <div className="rounded-full overflow-hidden w-40 h-40">
+                            <div className=" ml-4 lg:ml-0 rounded-full overflow-hidden w-32 h-32 lg:w-40 lg:h-40 ">
                                 <img
                                     className="w-full h-full object-cover object-top"
                                     src={sideprop.imgsidebar} // تأكد من تمرير مسار الصورة الصحيح
