@@ -1,8 +1,6 @@
 #root {
   max-width: 1380px;
   margin: 0 auto;
-  padding: 1rem;
-  text-align: center;
     --main-color: #1d1e20;
     --orange-color: #fd4520;
     --primary-color: #ffda75;
@@ -36,6 +34,7 @@
 body  {
   overflow-x: hidden;
   height: 100%;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 
@@ -52,6 +51,7 @@ body  {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   transition: all 1s ease-in-out;
   left:10px;
+  right: 10px;
 }
 
 .background {
@@ -517,4 +517,113 @@ button:hover .star-6 {
   height: auto;
   filter: drop-shadow(0 0 10px #fffdef);
   z-index: 2;
+}
+
+
+/* Star Contact */
+.contact-content {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.contact-info {
+  width: 750px;
+  padding: 30px;
+  background-color: var(--background-color-1);
+  box-shadow: var(--shadow-1);
+  border-radius: 10px;
+}
+
+.contact-info .image {
+  width: 300px;
+  height: 300px;
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+.contact-info .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.user-contact p span,
+.description,
+.contact-info-details .user p {
+  margin-bottom: 15px;
+  display: inline-block;
+  color: var(--text-color);
+}
+
+.contact-form {
+  width: 750px;
+  padding: 30px;
+  background-color: var(--background-color-1);
+  box-shadow: var(--shadow-1);
+  border-radius: 10px;
+}
+
+.input-row {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.input-row .input-group {
+  flex: 1;
+  width: 100%;
+}
+
+.input-group {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.input-group textarea,
+.input-group input {
+  width: 100%;
+  height: 50px;
+  background: #16181c;
+  border-radius: 5px;
+  box-shadow: var(--input-shadow);
+  border: 2px solid #191b1e;
+  transition: 0.3s;
+  font-size: 17px;
+  padding: 10px;
+  color: var(--white-color);
+}
+
+.input-group textarea {
+  height: 150px;
+  resize: none;
+}
+.input-group label {
+  text-transform: uppercase;
+  color: var(--text-color);
+  font-size: 13px;
+}
+
+.input-group textarea:focus,
+.input-group input:focus {
+  border-color: var(--primary-color);
+}
+/* End Contact */
+
+.btn {
+  width: 150px;
+  padding: 15px;
+  background: var(--background-color-1);
+  box-shadow: var(--shadow-1);
+  color: var(--white-color);
+  cursor: pointer;
+  border-radius: 5px;
+}
+.btn a {
+  color: var(--white-color);
 }

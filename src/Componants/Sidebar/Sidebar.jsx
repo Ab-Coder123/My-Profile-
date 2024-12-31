@@ -3,25 +3,24 @@ import { Sidebar } from '../../Constant/index';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import AnimatedSection from "../../Constant/AnimatedSection";
+import { useTranslation } from 'react-i18next';
 const Sideprop = ({ SidebarProp }) => {
     return (
         <>
-            {SidebarProp.map((sideprop) => {
-                return (
-                    <div className=' flex items-center flex-col' key={sideprop.id}>
+                    <div className=' flex items-center flex-col' key={SidebarProp.id}>
                         {/* one */}
                         <div className="py-5 flex flex-row lg:flex-col sm:flex-col gap-5 lg:gap-0 items-center justify-start">
                             <div className=" ml-4 lg:ml-0 rounded-full overflow-hidden w-32 h-32 lg:w-40 lg:h-40 ">
                                 <img
                                     className="w-full h-full object-cover object-top"
-                                    src={sideprop.imgsidebar} // تأكد من تمرير مسار الصورة الصحيح
+                                    src={SidebarProp.imgsidebar} // تأكد من تمرير مسار الصورة الصحيح
                                     alt=""
                                 />
                             </div>
                             <AnimatedSection animation="fadeIn" duration="1s">
                                 <div className="mt-14 flex flex-col items-center">
-                                    <h1 className=" text-xl font-bold mb-3">{sideprop.Name}</h1>
-                                    <p className=" text-md bg-zinc-600 p-1 rounded-md text-yellow-300 shadow shadow-sm shadow-slate-500 shadow-current"> {sideprop.bio}</p>
+                                    <h1 className=" text-xl font-bold mb-3">{SidebarProp.Name}</h1>
+                                    <p className=" text-md bg-zinc-600 p-1 rounded-md text-yellow-300 shadow shadow-sm shadow-slate-500 shadow-current"> {SidebarProp.bio}</p>
                                 </div>
                             </AnimatedSection>
 
@@ -41,7 +40,7 @@ const Sideprop = ({ SidebarProp }) => {
                                     <div className="flex flex-col items-start">
                                         <p>E-Mail</p>
                                         <Link>
-                                            {sideprop.Email}
+                                            {SidebarProp.Email}
                                         </Link>
                                     </div>
                                 </div>
@@ -56,7 +55,7 @@ const Sideprop = ({ SidebarProp }) => {
                                     <div className="flex flex-col items-start">
                                         <p>Phone</p>
                                         <Link>
-                                            {sideprop.Watsup}
+                                            {SidebarProp.Watsup}
                                         </Link>
                                     </div>
                                 </div>
@@ -65,37 +64,32 @@ const Sideprop = ({ SidebarProp }) => {
                         </div>
                     </div>
 
-
-                )
-            })}
-
-
-
         </>
     );
 }
 
 
 Sideprop.propTypes = {
-    SidebarProp: PropTypes.arrayOf(
-        PropTypes.shape({
+    SidebarProp: PropTypes.shape({
             id: PropTypes.string.isRequired,
             imgsidebar: PropTypes.string.isRequired,
             Name: PropTypes.string.isRequired,
             bio: PropTypes.string.isRequired,
             Email: PropTypes.string.isRequired,
             Watsup: PropTypes.string.isRequired,
-        })
-    ).isRequired,
+    }).isRequired,
 };
 
 
 const SIdebar = () => {
+    const { i18n } = useTranslation();
+    const currentLanguage = i18n.language; // اللغة الحالية (en أو ar)
+  
     return (
         <div className="relative">
             {/* Main Content Section */}
             <section className="z-50 relative lg:fixed w-full lg:w-[350px]  border border-none rounded-3xl bg-zinc-800 py-10 shadow shadow-sm shadow-gray-400">
-                <Sideprop SidebarProp={Sidebar} />
+                <Sideprop SidebarProp={Sidebar[currentLanguage].translation} />
             </section>
 
             {/* Cube in the Background */}

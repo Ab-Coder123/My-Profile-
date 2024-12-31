@@ -4,7 +4,7 @@ import Rightbar from '../../Componants/LeftBar/Rightbar';
 const Home = () => {
     return (
         <>
-            <section className="mx-auto p-10">
+            <section className="mx-auto p-10 font-cairo ">
                 <div className="flex flex-col gap-7 lg:flex-row lg:justify-around">
                     {/* Sidebar */}
                     <div className=" sm:w-[127%] md:w-[100%]  lg:w-[30%] -mx-10 lg:mx-0 ">

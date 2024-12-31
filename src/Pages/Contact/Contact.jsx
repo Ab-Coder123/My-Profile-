@@ -1,10 +1,10 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
 import SIdebar from '../../Componants/Sidebar/Sidebar';
-import Rightbarprofile from '../../Componants/LeftBar/Rightbarprofile';
+import Contactdata from '../../Componants/LeftBar/Contact/Contactdata';
 
 
-const Portfolios = () => {
+const Contact = () => {
     return (
         <>
             <section className="mx-auto p-10 font-cairo">
@@ -15,7 +15,7 @@ const Portfolios = () => {
                     </div>
                     {/* Rightbar */}
                     <div className=" sm:w-[127%] md:w-[100%]  lg:w-[75%] -mx-10 lg:mx-0 ">
-                        <Rightbarprofile />
+                        <Contactdata />
                     </div>
                 </div>
             </section>
@@ -23,4 +23,4 @@ const Portfolios = () => {
     );
 }
 
-export default Portfolios;
+export default Contact;

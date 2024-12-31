@@ -1,11 +1,8 @@
 import PropTypes from "prop-types";
-import { Maindata, Property } from '../../../Constant/index';
+import { Property } from '../../../Constant/index';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import AnimatedSection from '../../../Constant/AnimatedSection';
-
-
-
-
+import { useTranslation } from 'react-i18next';
 
 const Properites = ({ Whatprop }) => {
     return (
@@ -41,36 +38,19 @@ const Properites = ({ Whatprop }) => {
 }
 
 
-const Whatme = ({ Whatprop }) => {
+export const Whatme = () => {
     return (
         <>
-            {Whatprop.slice(1, 2).map((Whatmeprop) => {
-                return (
-                    <div className="flex flex-col items-start ml-2" key={Whatmeprop.id}>
-                        <h2 className="mb-1 font-bold text-xl">{Whatmeprop.Head2}</h2>
+                    <div className="flex flex-col items-start ml-2">
+                        <h2 className="mb-1 font-bold text-xl">ًما افعله</h2>
                         <div className='mb-3 w-10 h-1.5 rounded-md bg-yellow-500'></div>
                         {/* div 2 */}
                     </div>
-                )
-            })
-
-            }
         </>
     );
 }
 
-Whatme.propTypes = {
-    Whatprop: PropTypes.arrayOf(
-        PropTypes.shape({
-            id: PropTypes.string.isRequired,
-            Head2: PropTypes.string.isRequired,
-            Praph1: PropTypes.string.isRequired,
-            Praph2: PropTypes.string.isRequired,
-            ProertyHead: PropTypes.string.isRequired,
 
-        })
-    ).isRequired,
-};
 
 
 Properites.propTypes = {
@@ -86,13 +66,16 @@ Properites.propTypes = {
 
 
 const Whardo = () => {
+    const { i18n } = useTranslation();
+    const currentLanguage = i18n.language; // اللغة الحالية (en أو ar)
+  
     return (
         <>
             <section className="" >
-                <Whatme Whatprop={Maindata} />
+                <Whatme />
             </section>
             <section className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2  ">
-                <Properites Whatprop={Property} />
+                <Properites Whatprop={Property[currentLanguage].translation} />
             </section>
         </>
     );

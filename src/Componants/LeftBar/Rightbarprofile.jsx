@@ -5,7 +5,7 @@ import Socialmedia from "./Socialmedia/Socialmedia";
 const Rightbarprofile = () => {
     return (
         <>
-            <section className="z-50 relative overflow-hidden bg-zinc-800 pl-2 pt-0 pb-10 shadow shadow-sm shadow-gray-400 border border-none rounded-3xl">
+            <section className="z-50 relative overflow-hidden bg-zinc-800 px-2 pt-0 pb-10 shadow shadow-sm shadow-gray-400 border border-none rounded-3xl">
                 <Nav />
                 <Mainprofile />
                 <Socialmedia />

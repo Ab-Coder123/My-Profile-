@@ -5,6 +5,9 @@ export const content = [
 ];
 export const theme = {
   extend: {
+    fontFamily: {
+      cairo: ['Cairo', 'sans-serif'], // إضافة الخط Cairo
+    },
     animation: {
       fadeIn: 'fadeIn 1s ease-in-out',
       fadeOut: 'fadeOut 1s ease-in-out',
@@ -58,6 +61,7 @@ export const theme = {
         '0%': { transform: 'scale(1)', opacity: 1 },
         '100%': { transform: 'scale(0)', opacity: 0 },
       },
+    
     },
   },
 };

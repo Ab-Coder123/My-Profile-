@@ -2,8 +2,12 @@ import AnimatedSection from '../../../Constant/AnimatedSection';
 import PropTypes from 'prop-types';
 import { Portfolios } from '../../../Constant/index';
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 const Mainprofile = () => {
+   const { i18n } = useTranslation();
+      const currentLanguage = i18n.language; // اللغة الحالية (en أو ar)
+    
   return (
     <div>
       <AnimatedSection animation="fadeIn" duration="2s">
@@ -12,7 +16,7 @@ const Mainprofile = () => {
           <div className='mb-3 w-10 h-1.5 rounded-md bg-yellow-500'></div>
         </div>
         <div>
-          <BlogSection blogs={Portfolios} />
+          <BlogSection blogs={Portfolios[currentLanguage].translation} />
         </div>
       </AnimatedSection>
 
@@ -40,8 +44,8 @@ export const BlogSection = ({ blogs }) => {
             <div className="blog-image">
               <img src={blog.img} alt="projectImage" />
             </div>
-            <div className="blog-box-details">
-              <span className="category">{blog.category}</span>
+            <div className="blog-box-details ">
+              <span className="category">{blog.description}</span>
               <span className="likes">
                 <i
                   className="icon-heart"
@@ -65,7 +69,7 @@ BlogSection.propTypes = {
   blogs: PropTypes.arrayOf(
     PropTypes.shape({
       img: PropTypes.string.isRequired,
-      category: PropTypes.string.isRequired,
+      description: PropTypes.string.isRequired,
       likes: PropTypes.number.isRequired,
       title: PropTypes.string.isRequired,
     })

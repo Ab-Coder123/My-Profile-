@@ -2,7 +2,7 @@
 const Socialmedia = () => {
     return (
         <>
-            <div className='flex flex-col items-start ml-2 pb-10'>
+            <div className='flex flex-col items-start mx-2 pb-10'>
                 <h2 className='mb-1 font-bold text-xl'>Social media</h2>
                 <div className='mb-3 w-10 h-1.5 rounded-md bg-yellow-500'></div>
             </div>
