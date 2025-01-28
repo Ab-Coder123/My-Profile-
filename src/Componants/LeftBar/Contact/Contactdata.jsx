@@ -8,14 +8,14 @@ export const Contactform = () => {
 
             <AnimatedSection animation="fadeIn" duration="2s">
                 <div className='flex flex-col items-start ml-2 pb-10'>
-                    <h2 className='mb-1 font-bold text-xl'>Contact With me</h2>
+                    <h2 className='mb-1 font-bold text-xl'>Contact</h2>
                     <div className='mb-3 w-10 h-1.5 rounded-md bg-yellow-500'></div>
                 </div>
 
                 {/* Start Contact Me Section */}
                 <section className="contact" id="contact">
                     <div className="contact-content">
-                        <div className="contact-info">
+                        <div className="contact-info w-[350px] lg:w-[750px]">
                             <div className="image">
                                 <img src={contactimg} alt="contactImage" />
                             </div>
@@ -30,35 +30,35 @@ export const Contactform = () => {
                                 </p>
                                 <div className="user-contact">
                                     <p>
-                                        Phone: <span>+02 111 868 2951</span>
+                                    <span className='text-yellow-500 font-bold'>Phone:</span> +02 111 868 2951
                                     </p>
                                     <p>
-                                        Email: <span>abdoalmaestro123za@gmail.com</span>
+                                    <span className='text-yellow-500 font-bold'>E-mail:</span> <span>abdoalmaestro123za@gmail.com</span>
                                     </p>
                                 </div>
                             </div>
                         </div>
-                        <div className="contact-form my-12">
-                            <div className="input-row">
-                                <div className="input-group">
+                        <div className="contact-form my-12 w-[400px] lg:w-[750px]">
+                            <div className="flex flex-col lg:flex-row gap-2 items-start">
+                                 <div className="w-[80%] lg:w-[100%] input-group">
                                     <label htmlFor="username">Your Name</label>
                                     <input type="text" id="username" />
                                 </div>
-                                <div className="input-group">
+                                 <div className="w-[80%] lg:w-[100%] input-group">
                                     <label htmlFor="phone">phone number</label>
                                     <input type="text" id="phone" />
                                 </div>
                             </div>
-                            <div className="input-group">
-                                <label htmlFor="emaik">Email</label>
+                             <div className="w-[80%] lg:w-[100%] input-group">
+                            <label htmlFor="emaik">Email</label>
                                 <input type="email" id="email" />
                             </div>
-                            <div className="input-group">
-                                <label htmlFor="subject">subject</label>
+                             <div className="w-[80%] lg:w-[100%] input-group">
+                            <label htmlFor="subject">subject</label>
                                 <input type="text" id="subject" />
                             </div>
-                            <div className="input-group">
-                                <label htmlFor="message">message</label>
+                            <div className="w-[80%] lg:w-[100%] input-group">
+                            <label htmlFor="message">message</label>
                                 <textarea id="message" defaultValue={""} />
                             </div>
                             <button className="btn mb-5 hover-effect-gradient">send message</button>

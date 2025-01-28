@@ -17,12 +17,12 @@ const Nav = () => {
 
     const className =
     language === "ar"
-      ? "absolute top-3 w-32 right-80  p-2 bg-yellow-500 text-white rounded-lg ml-4"
-      : "absolute top-3 w-32 left-80 right-80 p-2 bg-yellow-500 text-white rounded-lg ml-4";
+      ? "absolute top-[80px] right-[100px] lg:top-3 w-[200px] lg:w-32 lg:right-80  p-2 bg-yellow-500 text-white rounded-lg ml-4 cursor-pointer"
+      : "absolute top-[80px] left-[100px] lg:top-3 w-[200px] lg:w-32 lg:left-80 right-80 p-2 bg-yellow-500 text-white rounded-lg ml-4 cursor-pointer";
 
 
     return (
-        <header className="pb-5 pt-0 ml-2 flex items-start justify-between">
+        <header className="pb-5 pt-0 ml-0 flex items-start justify-between">
             <div className="p-5 w-[300px] bg-zinc-700 border border-none rounded-xl">
                 <ul className="flex justify-between items-start gap-1">
                     <Link to="/">

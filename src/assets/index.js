@@ -4,6 +4,8 @@ import imgecommer2 from './images/E-commerce/2.png' ;
 import imgecommer3 from './images/E-commerce/3.png' ;
 import imgecommer4 from './images/E-commerce/4.png' ;
 import imgecommer5 from './images/E-commerce/5.png' ;
+import imgecommer6 from './images/E-commerce/6.png' ;
+import imgecommer7 from './images/E-commerce/7.png' ;
 
 export {
     imgsidebar ,
@@ -12,5 +14,8 @@ export {
     imgecommer3 ,
     imgecommer4 ,
     imgecommer5 ,
+    imgecommer6 ,
+    imgecommer7 ,
+
 
 } ;

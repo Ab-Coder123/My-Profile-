@@ -1,4 +1,4 @@
-import { imgecommer1, imgecommer2, imgecommer3, imgecommer4, imgecommer5, imgsidebar } from "../assets";
+import { imgecommer1, imgecommer2, imgecommer3, imgecommer4, imgecommer5, imgecommer6, imgecommer7, imgsidebar } from "../assets";
 
 const Sidebar = {
   en: {
@@ -154,6 +154,20 @@ const Portfolios = {
         img: imgecommer5,
         likes: 100,
       },
+      {
+        id: "6",
+        title: "connects you with top tourism companies  🌐",
+        description:'Saha Tourism 🌐✨ connects you with top tourism companies in Egypt 🇪🇬 that don’t have their own websites. Discover their exclusive packages 🏖️🗺️ all in one place, making planning your trip easier than ever! 🛫🎉' ,
+        img: imgecommer6,
+        likes: 100,
+      },
+      {
+        id: "7",
+        title: "Green Globe 🌱🌍 specializes in growing top-quality",
+        description:'Green Globe 🌱🌍 specializes in growing top-quality crops 🌾 for livestock and cattle 🐄🐑, ensuring sustainable agriculture 🌟. They also export their produce worldwide! 🚜✈️' ,
+        img: imgecommer7,
+        likes: 100,
+      },
     ]
   },
   
@@ -194,6 +208,23 @@ const Portfolios = {
         img: imgecommer5,
         likes: 100,
       },
+
+      {
+        id: "6",
+        title: "ساعد نفسك لحجز رحلات الخاصه بك من خلال موقعنا 🌐",
+        description: "شركة السياحة 🌟🌍 تجمع لك شركات السياحة المصرية 🇪🇬 اللي ما عندهاش مواقع إلكترونية. استكشف عروضهم المميزة 🏖️✈️ كلها في مكان واحد، وسهّل على نفسك تخطيط رحلتك! 🎉🗺️",
+        img: imgecommer6,
+        likes: 100,
+      },
+
+      {
+        id: "6",
+        title: "شركة جرين جلوب 🌱🌏 متخصصة في زراعة المحاصيل عالية الجودة 🌾",
+        description: "شركة جرين جلوب 🌱🌏 متخصصة في زراعة المحاصيل عالية الجودة 🌾 لتغذية الماشية والحيوانات 🐄🐑، مع تحقيق الزراعة المستدامة 🌟. كما تصدّر منتجاتها لكل أنحاء العالم! 🚜✈️",
+        img: imgecommer7,
+        likes: 100,
+      },
+      
     ]
   }
 };

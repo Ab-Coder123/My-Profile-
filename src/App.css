@@ -115,10 +115,38 @@ body  {
 }
 
 .box1 {
-  width: 70%;
-  height: 70%;
-  bottom: -70%;
-  left: -70%;
+  width: 85%;
+  height: 85%;
+  bottom: -85%;
+  left: -85%;
+}
+
+.box2 {
+  width: 75%;
+  height: 75%;
+  bottom: -75%;
+  left: -75%;
+}
+
+.box3 {
+  width: 65%;
+  height: 65%;
+  bottom: -65%;
+  left: -65%;
+}
+
+.box4 {
+  width: 55%;
+  height: 55%;
+  bottom: -55%;
+  left: -55%;
+}
+
+.box5{
+  width: 45%;
+  height: 45%;
+  bottom: -45%;
+  left: -45%;
 }
 
 .box1::before {
@@ -133,13 +161,6 @@ body  {
   filter: drop-shadow(0 0 5px white);
 }
 
-.box2 {
-  width: 50%;
-  height: 50%;
-  bottom: -50%;
-  left: -50%;
-  transition-delay: 0.2s;
-}
 
 .box2::before {
   background: radial-gradient(circle at 100% 107%, #FACC15 0%, #3F3F46 30%, #3F3F46 60%, #3F3F46 100%);
@@ -153,13 +174,7 @@ body  {
   filter: drop-shadow(0 0 5px white);
 }
 
-.box3 {
-  width: 30%;
-  height: 30%;
-  bottom: -30%;
-  left: -30%;
-  transition-delay: 0.4s;
-}
+
 
 .box3::before {
   background: radial-gradient(circle at 100% 107%, #FACC15 0%, #3F3F46 30%, #3F3F46 60%, #3F3F46 100%);
@@ -173,13 +188,35 @@ body  {
   filter: drop-shadow(0 0 5px white);
 }
 
-.box4 {
-  width: 10%;
-  height: 10%;
-  bottom: -10%;
-  left: -10%;
-  transition-delay: 0.6s;
+
+
+.box4::before {
+  background: radial-gradient(circle at 100% 107%, #FACC15 0%, #3F3F46 30%, #3F3F46 60%, #3F3F46 100%);
 }
+
+.box4:hover::before {
+  opacity: 1;
+}
+
+.box4:hover .icon .svg {
+  filter: drop-shadow(0 0 5px white);
+}
+
+
+
+.box5::before {
+  background: radial-gradient(circle at 100% 107%, #FACC15 0%, #3F3F46 30%, #3F3F46 60%, #3F3F46 100%);
+}
+
+.box5:hover::before {
+  opacity: 1;
+}
+
+.box5:hover .icon .svg {
+  filter: drop-shadow(0 0 5px white);
+}
+
+
 
 .card:hover {
   transform: scale(1.1);
@@ -530,10 +567,8 @@ button:hover .star-6 {
 }
 
 .contact-info {
-  width: 750px;
   padding: 30px;
   background-color: var(--background-color-1);
-  box-shadow: var(--shadow-1);
   border-radius: 10px;
 }
 
@@ -555,14 +590,12 @@ button:hover .star-6 {
 .contact-info-details .user p {
   margin-bottom: 15px;
   display: inline-block;
-  color: var(--text-color);
+  /* color: var(--text-color); */
 }
 
 .contact-form {
-  width: 750px;
   padding: 30px;
   background-color: var(--background-color-1);
-  box-shadow: var(--shadow-1);
   border-radius: 10px;
 }
 
@@ -572,10 +605,7 @@ button:hover .star-6 {
   gap: 30px;
 }
 
-.input-row .input-group {
-  flex: 1;
-  width: 100%;
-}
+
 
 .input-group {
   display: flex;
